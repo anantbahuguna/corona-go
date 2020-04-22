@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
-import { Cards, Chart, CountryPicker } from "./components";
+import { Cards, Chart, CountryPicker, GithubCard } from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api/index";
 
@@ -24,6 +24,7 @@ class App extends Component {
     render() {
         const { data, country } = this.state;
         return (
+            <Fragment>
             <div className={styles.container}>
                 <img className = {styles.image} 
                     src={coronaImg}
@@ -32,6 +33,12 @@ class App extends Component {
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart data={data} country={country}/>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <GithubCard />
+            <br/>
+            </Fragment>
         );
     }
 }

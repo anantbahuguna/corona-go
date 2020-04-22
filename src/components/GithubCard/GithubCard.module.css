@@ -1,0 +1,11 @@
+.container {
+    margin: auto;
+    
+}
+
+.card {
+    height: 50px;
+    width: 280px;
+    background-color: #000000;
+    border-radius: 30%;
+}
